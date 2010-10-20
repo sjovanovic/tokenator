@@ -18,7 +18,7 @@ for validating exchanging data. Its designed to be simple to use, and just work.
 
 ## Usage:
 
-  1. Get a MySQL database. **You do not need a new database to do this, as long as the database you connect to does not have a table called `tokens` already.**
+  1. Get a MySQL database. You do not need a new database to do this, as long as the database you connect to does not have a table called `tokens` already.
   2. Run the SQL code from `table-create.sql` in phpmyadmin (or whatever you use) to create the table to be used in the database. Be sure to change `DB_name` in
      the first line to the name of your database.
   3. Add `require('/path/to/tokenator.php');` to the page that you are going to use Tokenator on.
