@@ -27,7 +27,6 @@ for validating exchanging data. Its designed to be simple to use, and just work.
 
 ## Functions:
 
-
 ### generate &mdash; Creates a 32 character md5 token
 
 `boolean generate()`
