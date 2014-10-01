@@ -12,10 +12,10 @@
 */
 
   class Tokenator {
-    public static $DB_host = '127.0.0.1';
-    public static $DB_user = '';
-    public static $DB_pass = '';
-    public static $DB_name = '';
+    public static $DB_host;
+    public static $DB_user;
+    public static $DB_pass;
+    public static $DB_name;
     public static $token;
 
     /**

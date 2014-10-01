@@ -1,9 +1,21 @@
 <?php
 
+/*
+This is usage example
+ GET ?generate
+ GET ?token=12345
+*/
+
+
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
 require('tokenator.php');
+
+Tokenator::$DB_host = '127.0.0.1';
+Tokenator::$DB_user = 'root';
+Tokenator::$DB_pass = 'password';
+Tokenator::$DB_name = 'tokenator';
 
 if(isset($_GET['generate'])){
 	$apikey = "TEST_APIKEY";

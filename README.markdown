@@ -8,7 +8,7 @@ Dual licensed under MIT or GPL Version 2.0 by Ben Kulbertis
 ## Description:
 
 A PHP library that makes using token based authentication easy. Ask for a new token and you recieve a random md5 hash as a token, pass that token back through to
-validate and it simply returns true if the token is valid, and false if it is not. It can be used for web applications, or used for web integrated applications
+validate and it returns apikey and userid (or any other two pieces of information) if the token is valid, and false if it is not. It can be used for web applications, or used for web integrated applications
 for validating exchanging data. Its designed to be simple to use, and just work.
 
 ## Requirements:
@@ -31,7 +31,7 @@ for validating exchanging data. Its designed to be simple to use, and just work.
 
 `boolean generate()`
 <pre>
-  $token = Tokenator::generate();
+  $token = Tokenator::generate("TEST_API_KEY", "TEST_USER_ID");
   echo $token;
 </pre>
 will output something like:
@@ -45,12 +45,14 @@ will output something like:
   $valid = Tokenator::validate($token);
   if($valid)
     echo 'true';
+    print_r($valid);
   else
     echo 'false';
 </pre>
 If the token is valid will print:
 
 `true`
+`Array ( [0] => d1634069613fe0b723126e145a421e3a [token] => d1634069613fe0b723126e145a421e3a [1] => 1412179995 [timestamp] => 1412179995 [2] => TEST_APIKEY [apikey] => TEST_APIKEY [3] => TEST_USERID [userid] => TEST_USERID ) `
 
 And will print the following if invalid:
 
